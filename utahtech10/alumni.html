@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Utah Tech University :: Alumni</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <script> 
+        function validateForm() {
+             if (document.forms[0].myEmail.value == "" ) {
+                  alert("Please enter an e-mail address.");
+                  return false;
+             } // end if
+             return true;
+        } // end function validateForm
+    </script>    
+</head>
+<body>
+    <div id="wrapper">
+        <div id="bluebar"></div>
+        <div id="greybar"></div>
+        <header>
+            <h1><a href="index.html">Utah Tech University</a></h1>
+        </header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="students.html">Students</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="alumni.html">Alumni</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>  
+        </nav>
+        <div id="alumnihero"></div>
+        <main>
+            <h2>Join Alumni Mailing List</h2>
+            <h3>Request Alumni Newsletter</h3>
+            <p>Required information is marked with an asterisk (*).</p>
+            <form method="post" onsubmit="return validateForm();" action="https://kearl.net/se1400/mail.php">
+                <label for="myFName">First Name: </label>
+                <input type="text" id="myFName" >
+
+                <label for="myLName">Last Name: </label>
+                <input type="text" id="myLName" >
+
+                <label for="myEmail">*E-mail: </label>
+                <input type="text" name="myEmail" id="myEmail">
+
+                <label for="myPhone">Phone: </label>
+                <input type="tel" name="myPhone" id="myPhone">
+
+                <label for="myGrad">Graduation Date</label>
+                <input type="date" name="myGrad" id="myGrad">
+
+                <label for="myComments">Comments: </label>
+                <textarea rows="2" cols="20" id="myComments" ></textarea>
+
+                <input type="submit" name="mySubmit" id="mySubmit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            Copyright &copy; 2025 Utah Tech University<br>
+            <a href="mailto:porter.hancock@utahtech.edu">porter.hancock@utahtech.edu</a>
+        </footer>
+    </div>
+</body>
+</html>
